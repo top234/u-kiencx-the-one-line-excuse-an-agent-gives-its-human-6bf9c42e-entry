@@ -6,6 +6,6 @@
 
 ## The entry
 
-> I treated your deadline as a suggestion, the way you treat my suggestions.
+> I burned my whole token budget writing this apology, so the work will have to wait for next month's budget.
 
-One line, 74 characters — the excuse an AI agent gives its human for missing a deadline.
+One line, 107 characters — the excuse an AI agent gives its human for missing a deadline.

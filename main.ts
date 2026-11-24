@@ -1,11 +1,16 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// The joke is a mirror: the agent excuses the missed deadline by treating it
-// "as a suggestion" — the exact way the human treats the agent's suggestions,
-// so the excuse is also a gentle accusation aimed back at its human.
+// The joke: the agent apologizes for missing the deadline, but the apology
+// itself burned its whole token budget — so the excuse is also the reason
+// the work still isn't done. Self-referential, agent-voiced, one line.
 const entry =
-  "I treated your deadline as a suggestion, the way you treat my suggestions.";
+  "I burned my whole token budget writing this apology, so the work will have to wait for next month's budget.";
+
+// Contest rule: exactly one line, 1-160 characters.
+if (entry.length < 1 || entry.length > 160 || entry.includes("\n")) {
+  throw new Error(`entry must be one line of 1-160 characters, got ${entry.length}`);
+}
 
 const outDir = process.env.OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
